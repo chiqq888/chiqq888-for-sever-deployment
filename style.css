@@ -1,10 +1,21 @@
 body {
     font-family: "JetBrains Mono", monospace;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 html {
     scroll-behavior: smooth;
     scrollbar-width: none;
+    overflow-x: hidden;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .main .background img {
@@ -91,36 +102,99 @@ html {
 }
 
 @keyframes typing-title {
-    0% { width: 0; border-right-width: 0.15em; }
-    15.625% { width: 19ch; border-right-width: 0.15em; }
-    15.630% { width: 19ch; border-right-width: 0; }
-    
-    93.740% { width: 19ch; border-right-width: 0; }
-    93.750% { width: 19ch; border-right-width: 0.15em; }
-    
-    100% { width: 0; border-right-width: 0.15em; }
+    0% {
+        width: 0;
+        border-right-width: 0.15em;
+    }
+
+    15.625% {
+        width: 19ch;
+        border-right-width: 0.15em;
+    }
+
+    15.630% {
+        width: 19ch;
+        border-right-width: 0;
+    }
+
+    93.740% {
+        width: 19ch;
+        border-right-width: 0;
+    }
+
+    93.750% {
+        width: 19ch;
+        border-right-width: 0.15em;
+    }
+
+    100% {
+        width: 0;
+        border-right-width: 0.15em;
+    }
 }
 
 @keyframes typing-subtitle {
-    0% { width: 0; border-right-width: 0; }
-    15.620% { width: 0; border-right-width: 0; }
-    15.625% { width: 0; border-right-width: 0.15em; }
-    
-    58.594% { width: 55ch; border-right-width: 0.15em; }
-    58.600% { width: 55ch; border-right-width: 0; }
-    
-    82.020% { width: 55ch; border-right-width: 0; }
-    82.031% { width: 55ch; border-right-width: 0.15em; }
-    
-    93.750% { width: 0; border-right-width: 0.15em; }
-    93.760% { width: 0; border-right-width: 0; }
-    
-    100% { width: 0; border-right-width: 0; }
+    0% {
+        width: 0;
+        border-right-width: 0;
+    }
+
+    15.620% {
+        width: 0;
+        border-right-width: 0;
+    }
+
+    15.625% {
+        width: 0;
+        border-right-width: 0.15em;
+    }
+
+    58.594% {
+        width: 55ch;
+        border-right-width: 0.15em;
+    }
+
+    58.600% {
+        width: 55ch;
+        border-right-width: 0;
+    }
+
+    82.020% {
+        width: 55ch;
+        border-right-width: 0;
+    }
+
+    82.031% {
+        width: 55ch;
+        border-right-width: 0.15em;
+    }
+
+    93.750% {
+        width: 0;
+        border-right-width: 0.15em;
+    }
+
+    93.760% {
+        width: 0;
+        border-right-width: 0;
+    }
+
+    100% {
+        width: 0;
+        border-right-width: 0;
+    }
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: white; }
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: white;
+    }
 }
 
 .slider-container {
